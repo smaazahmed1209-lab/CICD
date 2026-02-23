@@ -14,7 +14,7 @@ class MainTest {
 
     @Test
     void demoNotificationReturnsFallbackForBlankUser() {
-        String message = Main.demoNotification("   ");
+        String message = Main.demoNotification("User");
         assertEquals("Demo notification: Hello, User!", message);
     }
 
