@@ -9,7 +9,7 @@ class MainTest {
     @Test
     void demoNotificationReturnsMessageForGivenUser() {
         String message = Main.demoNotification("Alice");
-        assertEquals("Demo notification: Hello, Aslam!", message);
+        assertEquals("Demo notification: Hello, Alice", message);
     }
 
     @Test
