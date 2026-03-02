@@ -14,7 +14,7 @@ class MainTest {
 
     @Test
     void demoNotificationReturnsFallbackForBlankUser() {
-        String message = Main.demoNotification("User");
+        String message = Main.demoNotification("   ");
         assertEquals("Demo notification: Hello, User!", message);
     }
 
@@ -22,5 +22,11 @@ class MainTest {
     void demoNotificationTrimsWhitespaceFromUser() {
         String message = Main.demoNotification("  Bob  ");
         assertEquals("Demo notification: Hello, Bob!", message);
+    }
+
+    @Test
+    void demoNotificationReturnsFallbackForNullUser() {
+        String message = Main.demoNotification(null);
+        assertEquals("Demo notification: Hello, User!", message);
     }
 }
